@@ -31,8 +31,10 @@ begin
     si.cb := SizeOf(si);
     ChDir(ExtractFilePath(Appl));
     cmdline := ExtractFilename(Appl);
-    if CreateProcess(PChar(cmdline), PChar(Trim(cmdline + ' ' + Parametrs)),nil,nil,False,0,nil,nil,si,pi)
-    then
+    if CreateProcess(nil,
+      PChar(AnsiQuotedStr(ExpandFileName(Appl), '"') + ' ' + Parametrs),
+      nil, nil, False, 0, nil, nil, si, pi)
+   then
     try
       repeat
         Sleep(5);
