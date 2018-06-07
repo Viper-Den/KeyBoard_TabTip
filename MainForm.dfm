@@ -28,7 +28,7 @@ object Form1: TForm1
   end
   object Label2: TLabel
     Left = 176
-    Top = 16
+    Top = 0
     Width = 98
     Height = 20
     Caption = 'CreateProcess'
@@ -104,7 +104,7 @@ object Form1: TForm1
     Top = 24
     Width = 233
     Height = 105
-    Caption = 'Log off'
+    Caption = 'Log off (for shell)'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 30
@@ -113,5 +113,20 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 4
     OnClick = btnLogOffClick
+  end
+  object Button3: TButton
+    Left = 184
+    Top = 24
+    Width = 75
+    Height = 25
+    Caption = 'Example'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+    OnClick = Button3Click
   end
 end

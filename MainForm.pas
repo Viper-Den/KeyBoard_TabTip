@@ -16,10 +16,12 @@ type
     Button2: TButton;
     Label2: TLabel;
     btnLogOff: TButton;
+    Button3: TButton;
     procedure btnShowClick(Sender: TObject);
     procedure btnHideClick(Sender: TObject);
     procedure btnLogOffClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,7 +53,14 @@ end;
 procedure TForm1.Button1Click(Sender: TObject);
 var Appl: string;
 begin
-  Appl := '"C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe"';
+  Appl := 'C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe';
+  RunAppDeskLockWait(Appl,'');
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var Appl: string;
+begin
+  Appl := 'c:\\Windows\\notepad.exe';
   RunAppDeskLockWait(Appl,'');
 end;
 
